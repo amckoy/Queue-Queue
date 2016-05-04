@@ -1,8 +1,8 @@
 /*
-Team Queue-Queue -- Ayman Ahmed, Adam McKoy, Anton Goretsky, Derek Lin
-APCS2 pd5
-HW#35 -- Privileged Status Gets You to the Front of the Line
-2016-05-04
+  Team Queue-Queue -- Ayman Ahmed, Adam McKoy, Anton Goretsky, Derek Lin
+  APCS2 pd5
+  HW#35 -- Privileged Status Gets You to the Front of the Line
+  2016-05-04
 */
 
 import java.util.ArrayList;
@@ -16,7 +16,8 @@ public class ArrayPriorityQueue implements PriorityQueue {
     }
 
     public void add(Object x) {
-        queue.add(x);
+        //IM SORRY FOR DA TYPECASTING :(
+        queue.add((Comparable)x);
     }
 
     public boolean isEmpty() {
@@ -24,11 +25,11 @@ public class ArrayPriorityQueue implements PriorityQueue {
     }
 
     public Object peekMin() {
-        //IM SORRY FOR DA TYPECASTING :(
+        //IM SORRY PT. 2
         Object temp = (Comparable)(queue.get(0));
         for (int i = 1 ; i < queue.size() ; i++) {
-            if (temp.compareTo(queue.get(i) > 0)) {
-                //IM SORRY PT. 2
+            if (temp.compareTo(queue.get(i)) > 0) {
+                //IM SORRY PT. 3
                 temp = (Comparable)(queue.get(i));
             }
         }
@@ -39,7 +40,7 @@ public class ArrayPriorityQueue implements PriorityQueue {
         int index = 0;
         Object temp = (Comparable)(queue.get(0));
         for (int i = 1 ; i < queue.size() ; i++) {
-            if (temp.compareTo(queue.get(i) > 0)) {
+            if (temp.compareTo(queue.get(i)) > 0) {
                 //IM SORRY PT. 2
                 temp = (Comparable)(queue.get(i));
                 index = i;
