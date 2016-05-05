@@ -51,7 +51,10 @@ public class ArrayPriorityQueue implements PriorityQueue {
 
     public static void main(String[] args) {
         ArrayPriorityQueue QUEUEQUEUE = new ArrayPriorityQueue();
-        //all anton's problem now
+        /* @anton 
+         * @derek
+         * @adam
+         */
     }
     
 }
